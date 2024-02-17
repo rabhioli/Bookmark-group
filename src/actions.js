@@ -44,7 +44,7 @@ return redirect("/")
 
 }
 
-export const deleteAction = async (params) => {
+export const deleteAction = async ({params}) => {
     await fetch (`${URL}/Bookmark/${params.id}`, {
         method: 'delete'
     });
