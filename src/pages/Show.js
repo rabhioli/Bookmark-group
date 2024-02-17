@@ -11,8 +11,8 @@ const Show = () => {
       
       <h2>Update {bookmark.name}</h2>
       <Form action={`/update/${bookmark._id}`} method="post">
-        <input type="input" name="title" placeholder="titles name" />
-        <input type="input" name="url" placeholder="url link" />
+        <input type="input" name="title" placeholder="titles name" defaultValue={bookmark.title}/>
+        <input type="input" name="url" placeholder="url link" defaultValue={bookmark.url}/>
         <input type="submit" value={`update ${bookmark.title}`} />
       </Form>
     </div>
