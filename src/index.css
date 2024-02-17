@@ -1,6 +1,6 @@
 .nav {
-  background-color: #ca2727; /* Add a background color if needed */
-  padding: 20px; /* Add padding as needed */
+  background-color: #ca2727; 
+  padding: 20px; 
   text-align: center;
 }
 
@@ -10,12 +10,12 @@
 }
 
 .logo {
-  font-size: 36px; /* Adjust the font size as needed */
+  font-size: 36px; 
   font-weight: bold;
-  color: rgb(7, 2, 7); /* Text color */
+  color: rgb(7, 2, 7); 
   background-color: red;
-  padding: 10px 20px; /* Adjust padding as needed */
-  border-radius: 5px; /* Adjust the border-radius for the desired shape */
+  padding: 10px 20px; 
+  border-radius: 5px; 
 }
 
 body {

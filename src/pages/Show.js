@@ -21,7 +21,7 @@ const Show = () => {
         <input
           type="submit"
           value={`Delete ${bookmark.title}`}
-          className="delete-button" // Apply the new class here
+          className="delete-button" 
         />
       </Form>
     </div>
