@@ -15,6 +15,12 @@ const Show = () => {
         <input type="input" name="url" placeholder="url link" defaultValue={bookmark.url}/>
         <input type="submit" value={`update ${bookmark.title}`} />
       </Form>
+
+      <h2>Delete bookmark</h2>
+      <Form action={`/delete/${bookmark._id}`} method="post">
+       <input type="submit" value={`delete ${bookmark.title}`} />
+      </Form>
+
     </div>
   );
 };

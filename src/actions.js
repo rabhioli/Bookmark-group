@@ -25,4 +25,28 @@ export const updateAction = async ({request,params}) => {
     return redirect("/")
 }
 
+export const createAction = async ({request,params}) => {
+    const formData = await request.formData()
+  
+    const createdBookmark = {
+        title: formData.get("title"),
+        url: formData.get("url"),
 
+}
+ await fetch(`${URL}/Bookmark`, {
+        method: "post",
+        headers: {
+            "Content-Type":"application/json"
+        },
+        body: JSON.stringify(createdBookmark)
+})
+return redirect("/")
+
+}
+
+export const deleteAction = async (params) => {
+    await fetch (`${URL}/Bookmark/${params.id}`, {
+        method: 'delete'
+    });
+    return redirect('/')
+}

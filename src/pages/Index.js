@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, Form} from 'react-router-dom';
 
 const Landing = () => {
   const Bookmarks = useLoaderData();
@@ -8,6 +8,13 @@ const Landing = () => {
 
   return (
     <div>
+      <h3>Add a Bookmark</h3>
+      <Form action='/create' method='post'> 
+        <input type="input" name="title" placeholder="titles name"/>
+        <input type="input" name="url" placeholder="url link"/>
+        <input type="submit" value={'create bookmark'} />
+      </Form>
+
       <h3>Bookmarks</h3>
       {Bookmarks.map(Bookmark => (
         <div key={Bookmark._id} className="Bookmark">
