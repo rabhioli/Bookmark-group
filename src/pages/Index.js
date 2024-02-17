@@ -8,7 +8,7 @@ const Landing = () => {
 
   return (
     <div>
-      <h3>Add Bookmarks</h3>
+      <h3>Add a Bookmarks</h3>
       <Form action='/create' method='post'> 
         <input type="input" name="title" placeholder="titles name"/>
         <input type="input" name="url" placeholder="url link"/>
