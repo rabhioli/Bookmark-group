@@ -2,7 +2,7 @@ import { redirect } from "react-router-dom"
 
 
 const URL = process.env.REACT_APP_URL
-
+//update 
 export const updateAction = async ({request,params}) => {
   
     const formData = await request.formData()
@@ -24,7 +24,7 @@ export const updateAction = async ({request,params}) => {
 
     return redirect("/")
 }
-
+//create
 export const createAction = async ({request,params}) => {
     const formData = await request.formData()
   
@@ -43,7 +43,7 @@ export const createAction = async ({request,params}) => {
 return redirect("/")
 
 }
-
+//delete
 export const deleteAction = async ({params}) => {
     await fetch (`${URL}/Bookmark/${params.id}`, {
         method: 'delete'
