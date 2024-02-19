@@ -1,3 +1,12 @@
+# Seal Team1
+
+### Jeff
+    
+    (Backend)
+
+### Rabhi
+    
+    (Frontend)
 
 ### Diana
     
