@@ -8,22 +8,30 @@ const Landing = () => {
 
   return (
     <div>
-      <h3>Add a Bookmarks</h3>
-      <Form action='/create' method='post'> 
-        <input type="input" name="title" placeholder="titles name"/>
-        <input type="input" name="url" placeholder="url link"/>
-        <input type="submit" value={'create bookmark'} />
-      </Form>
+      <h3>Add New</h3>
+        <div className="form">
+        <div className="fields">
+          <Form action='/create' method='post'> 
+          <div className="input">
+            <input type="input" name="title" placeholder="titles name"/>
+            <input type="input" name="url" placeholder="url (https://) required"/>
+          </div>
+            <input type="submit" value={'create bookmark'} />
+          </Form>
+          </div>
+        </div>
 
-      <h3>Bookmarks</h3>
-      {Bookmarks.map(Bookmark => (
+      <div className="index-container">
+      {/* <h3>Your List</h3> */}
+      {Bookmarks.map((Bookmark) => (
         <div key={Bookmark._id} className="Bookmark">
           <Link to={`/${Bookmark._id}`}>
             <h3>{Bookmark.title}</h3>
           </Link>
-          <h4>{Bookmark.url}</h4>
+          <a href={Bookmark.url}>{Bookmark.url}</a>
         </div>
       ))}
+      </div>
     </div>
   );
 };
