@@ -117,14 +117,18 @@ body {
   width: 200px;
   height: 100px;
   margin: 10px;
-  border: 2.5px solid white;
+  border: 2.5px solid rgb(255, 255, 255);
   border-radius: 10px;
   padding: 15px;
   box-sizing: border-box;
   /* background-color: lightskyblue;*/
   background-color: black;
   text-align: center; 
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 75);
+  box-shadow: 0 2px 5px rgba(255, 0, 0, 75);
+  max-width: 250px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  word-break: break-all;
 }
 
 
@@ -132,6 +136,7 @@ body {
   color: #8d8d8d;
   text-decoration: none;
   font-size: 0.8rem;
+  overflow: unhidden;
 }
 
 .Bookmark a:hover {

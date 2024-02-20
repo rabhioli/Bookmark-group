@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData, Form } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Show = () => {
   const bookmark = useLoaderData(); 
@@ -13,7 +14,7 @@ const Show = () => {
       <Form action={`/update/${bookmark._id}`} method="post">
         <input type="input" name="title" placeholder="titles name" defaultValue={bookmark.title}/>
         <input type="input" name="url" placeholder="url link" defaultValue={bookmark.url}/>
-        <input type="submit" value={`update ${bookmark.title}`} />
+        <input type="submit" value={`Update ${bookmark.title}`} />
       </Form>
       
       <h2>{`Delete ${bookmark.title}`}</h2>
@@ -23,7 +24,11 @@ const Show = () => {
           value={"Delete"}
           className="delete-button" 
         />
-      </Form>
+      </Form> 
+        <br></br>
+      <Link to="/">
+                    <button>Return to Index</button>
+      </Link>
     </div>
   );
 };
