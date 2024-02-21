@@ -1,7 +1,21 @@
+
+* {
+  box-sizing: border-box;
+}
+
+@keyframes background-change {
+  50% { background-color: lightpink; }
+  50% { background-color:red }
+  /* 50% { background-color: lightsalmon; } */
+}
+
 .nav {
-  background-color: #ca2727; 
+  animation: background-change 10s infinite;
+  /* background-image: radial-gradient(circle, white, red 50%); */
+  /* background-color: #ca2727;  */
   padding: 20px; 
-  text-align: center;
+  /* text-align: center; */
+  border: 2px solid black;
 }
 
 .logo-link {
@@ -18,14 +32,52 @@
   border-radius: 5px; 
 }
 
+.background-image {
+  background-image: url("https://tomorrowsva.com/wp-content/uploads/2021/08/Featured-Image-Template-for-Blogs-4.jpg");
+  width: 100%; 
+  height: 20vh;
+  object-fit: cover;
+  object-position: 50% 0;
+  background-size: cover;
+  background-position: center;
+  border: 1.5px solid black;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.75);
+}
+
+h6 {
+  align-items: end;
+  font-size: 5px;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .fit-image {
+    object-position: 50% 25%; /* Crop more from the bottom on smaller screens */
+  }
+}
+
 body {
-  margin: 0;
+  margin: 0 auto;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  background-color: rgb(179, 179, 179);
+  /* color: white; */
+}
+
+.form, .input {
+  display: flex;
+  flex-direction: wrap;
+  max-width: 300px;
+  /* margin: 2px 2px 2px 2px; */
+}
+
+.input {
+  padding: 0.5rem;
 }
 
 .delete-button {
@@ -35,5 +87,91 @@ body {
   padding: 10px 15px;
   cursor: pointer;
   border-radius: 5px;
- 
+}
+
+.index-container {
+  padding: 0.5rem 1rem;
+  /* margin: 0 1px 1px 1px; */
+  display: flex; 
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.fields::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 20em;
+  background: lightgray;
+  margin: 0.5em auto;
+  opacity: 0.75;
+}
+
+.Bookmark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 200px;
+  height: 100px;
+  margin: 10px;
+  border: 2.5px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 15px;
+  box-sizing: border-box;
+  /* background-color: lightskyblue;*/
+  background-color: black;
+  text-align: center; 
+  box-shadow: 0 2px 5px rgba(255, 0, 0, 75);
+  max-width: 250px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  word-break: break-all;
+}
+
+
+.Bookmark a {
+  color: #8d8d8d;
+  text-decoration: none;
+  font-size: 0.8rem;
+  overflow: unhidden;
+}
+
+.Bookmark a:hover {
+  color: red;
+}
+
+a {
+  color: white;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-container {
+  /* display: "flex";  */
+  /* flex-direction: "column"; */
+  /* min-height: "100vh";  */
+  /* justify-content: "flex-end"; */
+  padding: 2rem;
+}
+
+.footer-container::before {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 20em;
+  background: lightgray;
+  margin: 0.5em auto;
+  opacity: 0.75;
 }
