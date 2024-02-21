@@ -31,6 +31,8 @@
 ---
 - Deployed Website:
 
+    -[Bookmarked](https://master--ephemeral-sunburst-e2466a.netlify.app/)
+
 ---
 - Trello Board:
 
